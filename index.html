@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Northstar&trade; Number Cruncher</title>
     <!-- CSS -->
+    <link rel="stylesheet" href="/Content/custom.css"/>
     <link rel="stylesheet" href="/Scripts/lib/jquery-mobile-bower/css/jquery.mobile-1.4.5.min.css"/>
 </head>
 <body>
@@ -16,55 +17,54 @@
 
         <!-- main content -->
         <input type="text"  id="displayControl" data-theme="a" style="text-align: right;" value="0" />
-        <div data-role="controlgroup" data-type="horizontal">
-            <div class="ui-grid-b">
-                <div class="ui-block-a"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="keyClear">Clear</button></div>
-                <div class="ui-block-c"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline ui-icon-arrow-l ui-btn-icon-notext ui-nodisc-icon ui-alt-icon" id="keyC"></button></div>
-                <div class="ui-block-d"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="keyDivide">&divide;</button></div>
-            </div>
+        <div data-role="controlgroup" data-type="horizontal" style="text-align: center;">
             <div class="ui-grid-c">
-                <div class="ui-block-a"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="key7">7</button></div>
-                <div class="ui-block-b"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="key8">8</button></div>
-                <div class="ui-block-c"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="key9">9</button></div>
-                <div class="ui-block-d"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="keyMultiply">X</button></div>
+                <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-double-btn ui-btn-a" id="keyClear">Clear</button></div>
+                <div class="ui-block-b"></div>
+                <div class="ui-block-c"><button data-theme="a" class="ui-btn custom-back-btn ui-btn-a ui-icon-arrow-l ui-btn-icon-bottom ui-nodisc-icon ui-alt-icon" id="keyC"></button></div>
+                <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="keyDivide">&divide;</button></div>
 
-                <div class="ui-block-a"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="key4">4</button></div>
-                <div class="ui-block-b"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="key5">5</button></div>
-                <div class="ui-block-c"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="key6">6</button></div>
-                <div class="ui-block-d"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="keySubtract">-</button></div>
+                <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key7">7</button></div>
+                <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key8">8</button></div>
+                <div class="ui-block-c"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key9">9</button></div>
+                <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="keyMultiply">X</button></div>
 
-                <div class="ui-block-a"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="key1">1</button></div>
-                <div class="ui-block-b"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="key2">2</button></div>
-                <div class="ui-block-c"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="key3">3</button></div>
-                <div class="ui-block-d"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="keyAdd">+</button></div>
-            </div>
-            <div class="ui-grid-b">
-                <div class="ui-block-a"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="key0">0</button></div>
-                <div class="ui-block-b"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="keyDecimalPoint">.</button></div>
-                <div class="ui-block-c"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="keyEquals">=</button></div>
+                <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key4">4</button></div>
+                <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key5">5</button></div>
+                <div class="ui-block-c"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key6">6</button></div>
+                <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="keySubtract">-</button></div>
+
+                <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key1">1</button></div>
+                <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key2">2</button></div>
+                <div class="ui-block-c"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key3">3</button></div>
+                <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="keyAdd">+</button></div>
+
+                <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key0">0</button></div>
+                <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="keyDecimalPoint">.</button></div>
+                <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-double-btn ui-btn-a" id="keyEquals">=</button></div>
             </div>
         </div>
         <!--
         <div data-role="main" class="ui-content" style="text-align: center;">
             <div data-role="controlgroup" data-type="horizontal">
-                <button class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline">7</button>
-                <button class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline">8</button>
-                <button class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline">9</button>
+                <button class="ui-btn ui-btn-a">7</button>
+                <button class="ui-btn ui-btn-a">8</button>
+                <button class="ui-btn ui-btn-a">9</button>
             </div>
             <div data-role="controlgroup" data-type="horizontal">
-                <button class="ui-btn ui-corner-all ui-shadow ui-btn-a">4</button>
-                <button class="ui-btn ui-corner-all ui-shadow ui-btn-a">5</button>
-                <button class="ui-btn ui-corner-all ui-shadow ui-btn-a">6</button>
+                <button class="ui-btn ui-btn-a">4</button>
+                <button class="ui-btn ui-btn-a">5</button>
+                <button class="ui-btn ui-btn-a">6</button>
             </div>
             <div data-role="controlgroup" data-type="horizontal">
-                <button class="ui-btn ui-corner-all ui-shadow ui-btn-a">1</button>
-                <button class="ui-btn ui-corner-all ui-shadow ui-btn-a">2</button>
-                <button class="ui-btn ui-corner-all ui-shadow ui-btn-a">3</button>
+                <button class="ui-btn ui-btn-a">1</button>
+                <button class="ui-btn ui-btn-a">2</button>
+                <button class="ui-btn ui-btn-a">3</button>
             </div>
              <div data-role="controlgroup" data-type="horizontal">
-                <button class="ui-btn ui-corner-all ui-shadow ui-btn-a">0</button>
-                <button class="ui-btn ui-corner-all ui-shadow ui-btn-a">.</button>
-                <button class="ui-btn ui-corner-all ui-shadow ui-btn-a">=</button>
+                <button class="ui-btn ui-btn-a">0</button>
+                <button class="ui-btn ui-btn-a">.</button>
+                <button class="ui-btn ui-btn-a">=</button>
             </div>
         </div>
         -->
