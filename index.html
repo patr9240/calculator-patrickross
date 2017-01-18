@@ -7,17 +7,76 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/Content/custom.css"/>
     <link rel="stylesheet" href="/Scripts/lib/jquery-mobile-bower/css/jquery.mobile-1.4.5.min.css"/>
+    <!-- Favicons -->
+    <link rel="shortcut icon" type="image/x-icon" href="/Assets/logo/favicon.ico">
+    <link rel="apple-touch-icon" href="\Assets\logo\NorthStarIconOrangex32.png" />
+    <link rel="apple-touch-icon-precomposed" href="\Assets\logo\NorthStarIconOrangex32.png" />
 </head>
 <body>
+
     <!-- Start portrait-calc Container -->
     <div data-role="page" data-theme="b" id="portrait-calc">
         <div data-role="header">
             <span style="position: absolute; left: 0; top: 0;"><img src="\Assets\logo\NorthStarIconOrangex48.png" alt="NorthStar Logo"/></span>
             <h1>Number Cruncher</h1>
         </div>
+
+        <!--
         <div data-role="navbar">
             <ul>
                 <li><a href="#landscape-calc" data-icon="refresh" data-transition="turn">Rotate</a></li>
+            </ul>
+        </div>
+        -->
+
+        <!-- main content -->
+        <br>
+        <input type="text" id="displayControl" data-theme="a" style="text-align: right;" value="0" />
+        <br>
+        <div data-role="controlgroup" data-type="horizontal" style="text-align: center;">
+            <div class="ui-grid-c">
+                <div class="portrait">
+                    <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-clear-btn ui-btn-a" id="keyClear">Clear</button></div>
+                    <div class="ui-block-b"></div>
+                    <div class="ui-block-c"><button data-theme="a" class="ui-btn custom-back-btn ui-btn-a ui-icon-arrow-l ui-btn-icon-bottom ui-nodisc-icon ui-alt-icon" id="keyC"></button></div>
+                    <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="keyDivide">&divide;</button></div>
+
+                    <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key7">7</button></div>
+                    <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key8">8</button></div>
+                    <div class="ui-block-c"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key9">9</button></div>
+                    <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="keyMultiply">X</button></div>
+
+                    <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key4">4</button></div>
+                    <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key5">5</button></div>
+                    <div class="ui-block-c"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key6">6</button></div>
+                    <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="keySubtract">-</button></div>
+
+                    <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key1">1</button></div>
+                    <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key2">2</button></div>
+                    <div class="ui-block-c"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key3">3</button></div>
+                    <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="keyAdd">+</button></div>
+
+                    <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key0">0</button></div>
+                    <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="keyDecimalPoint">.</button></div>
+                    <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-equal-btn ui-btn-a" id="keyEquals">=</button></div>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h3>NorthStar&trade;</h3>
+        </div>
+    </div>
+    <!-- End portrait-calc Container -->
+
+     <!-- Start landscape-calc Container -->
+    <div data-role="page" data-theme="b" id="landscape-calc">
+        <div data-role="header">
+            <span style="position: absolute; left: 0; top: 0;"><img src="\Assets\logo\NorthStarIconOrangex48.png" alt="NorthStar Logo"/></span>
+            <h1>Number Cruncher</h1>
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#portrait-calc" data-icon="refresh" data-transition="turn">Rotate</a></li>
             </ul>
         </div>
 
@@ -25,21 +84,21 @@
         <input type="text" id="displayControl" data-theme="a" style="text-align: right;" value="0" />
         <div data-role="controlgroup" data-type="horizontal" style="text-align: center;">
             <div class="ui-grid-c">
-                <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-double-btn ui-btn-a" id="keyClear">Clear</button></div>
+                <div class="ui-block-a"><button data-theme="a" class="ui-btn" id="keyClear">Clear</button></div>
                 <div class="ui-block-b"></div>
-                <div class="ui-block-c"><button data-theme="a" class="ui-btn custom-back-btn ui-btn-a ui-icon-arrow-l ui-btn-icon-bottom ui-nodisc-icon ui-alt-icon" id="keyC"></button></div>
-                <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="keyDivide">&divide;</button></div>
+                <div class="ui-block-c"><button data-theme="a" class="ui-btn ui-icon-arrow-l ui-btn-icon-bottom ui-nodisc-icon ui-alt-icon" id="keyC"></button></div>
+                <div class="ui-block-d"><button data-theme="a" class="ui-btn" id="keyDivide">&divide;</button></div>
 
-                <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key7">7</button></div>
-                <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key8">8</button></div>
-                <div class="ui-block-c"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key9">9</button></div>
-                <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="keyMultiply">X</button></div>
+                <div class="ui-block-a"><button data-theme="a" class="ui-btn" id="key7">7</button></div>
+                <div class="ui-block-b"><button data-theme="a" class="ui-btn" id="key8">8</button></div>
+                <div class="ui-block-c"><button data-theme="a" class="ui-btn" id="key9">9</button></div>
+                <div class="ui-block-d"><button data-theme="a" class="ui-btn" id="keyMultiply">X</button></div>
 
-                <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key4">4</button></div>
-                <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key5">5</button></div>
-                <div class="ui-block-c"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key6">6</button></div>
-                <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="keySubtract">-</button></div>
-
+                <div class="ui-block-a"><button data-theme="a" class="ui-btn" id="key4">4</button></div>
+                <div class="ui-block-b"><button data-theme="a" class="ui-btn" id="key5">5</button></div>
+                <div class="ui-block-c"><button data-theme="a" class="ui-btn" id="key6">6</button></div>
+                <div class="ui-block-d"><button data-theme="a" class="ui-btn" id="keySubtract">-</button></div>
+                  
                 <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key1">1</button></div>
                 <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key2">2</button></div>
                 <div class="ui-block-c"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key3">3</button></div>
@@ -47,6 +106,7 @@
 
                 <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key0">0</button></div>
                 <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="keyDecimalPoint">.</button></div>
+                <div class="ui-block-c"></div>
                 <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-double-btn ui-btn-a" id="keyEquals">=</button></div>
             </div>
         </div>
@@ -54,54 +114,7 @@
             <h3>NorthStar&trade;</h3>
         </div>
     </div>
-    <!-- End portrait-calc Container -->
-
-     <!-- Start portrait-calc Container -->
-    <div data-role="page" data-theme="b" id="portrait-calc">
-        <div data-role="header">
-            <span style="position: absolute; left: 0; top: 0;"><img src="\Assets\logo\NorthStarIconOrangex48.png" alt="NorthStar Logo"/></span>
-            <h1>Number Cruncher</h1>
-        </div>
-        <div data-role="navbar">
-            <ul>
-                <li><a href="#landscape-calc" data-icon="refresh" data-transition="turn">Rotate</a></li>
-            </ul>
-        </div>
-
-        <!-- main content -->
-        <input type="text" id="displayControl" data-theme="a" style="text-align: right;" value="0" />
-        <div data-role="controlgroup" data-type="horizontal" style="text-align: center;">
-            <div class="ui-grid-c ui-responsive">
-                <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-double-btn ui-btn-a" id="keyClear">Clear</button></div>
-                <div class="ui-block-b"></div>
-                <div class="ui-block-c"><button data-theme="a" class="ui-btn custom-back-btn ui-btn-a ui-icon-arrow-l ui-btn-icon-bottom ui-nodisc-icon ui-alt-icon" id="keyC"></button></div>
-                <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="keyDivide">&divide;</button></div>
-
-                <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key7">7</button></div>
-                <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key8">8</button></div>
-                <div class="ui-block-c"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key9">9</button></div>
-                <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="keyMultiply">X</button></div>
-
-                <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key4">4</button></div>
-                <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key5">5</button></div>
-                <div class="ui-block-c"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key6">6</button></div>
-                <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="keySubtract">-</button></div>
-
-                <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key1">1</button></div>
-                <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key2">2</button></div>
-                <div class="ui-block-c"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key3">3</button></div>
-                <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="keyAdd">+</button></div>
-
-                <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key0">0</button></div>
-                <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="keyDecimalPoint">.</button></div>
-                <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-double-btn ui-btn-a" id="keyEquals">=</button></div>
-            </div>
-        </div>
-        <div data-role="footer" data-position="fixed">
-            <h3>NorthStar&trade;</h3>
-        </div>
-    </div>
-    <!-- End portrait-calc Container -->
+    <!-- End landscape-calc Container -->
 
     <!-- Javascript -->
     <script src="\Scripts\lib\jquery\dist\jquery.min.js"></script>
