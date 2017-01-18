@@ -22,3 +22,13 @@
     text-align: center;
     padding: 120px;
 }
+.ui-button-red {
+    background: #f76e6e !important;
+    text-shadow: #f76e6e !important;
+    border-style: #420505 !important;
+}
+.ui-button-red:hover {
+    background: #f02828 !important;
+    text-shadow: #f02828 !important;
+    border-style: #420505 !important;
+}
