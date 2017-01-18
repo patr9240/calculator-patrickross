@@ -3,72 +3,76 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>Patrick's Demo Mobile WebApp</title>
+    <title>Northstar&trade; Number Cruncher</title>
     <!-- CSS -->
     <link rel="stylesheet" href="/Scripts/lib/jquery-mobile-bower/css/jquery.mobile-1.4.5.min.css"/>
 </head>
 <body>
     <!-- Start Homepage Container -->
-    <div data-role="page" data-theme="b" id="home">
-        <div data-role="header">
-            <h1>Header Content</h1>
+    <div data-role="page" data-theme="b" id="portrait-calc" data-position="fixed">
+        <div data-role="header"+>
+            <h1>Number Cruncher</h1>
         </div>
-        <div data-role="navbar">
-            <ul>
-                <li><a href="#home" data-icon="home" data-transition="turn">Home</a></li>
-                <li><a href="#contact" data-icon="phone"data-transition="turn">Contact</a></li>
-            </ul>
-        </div>
+
         <!-- main content -->
-        <div data-role="main" class="ui-content ui-grid-a" style="text-align: center;">
-            <div data-role="controlgroup"" data-type="horizontal">
-                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline">7</a>
-                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline">8</a>
-                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline">9</a>
+        <input type="text"  id="displayControl" data-theme="a" style="text-align: right;" value="0" />
+        <div data-role="controlgroup" data-type="horizontal">
+            <div class="ui-grid-b">
+                <div class="ui-block-a"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="keyClear">Clear</button></div>
+                <div class="ui-block-c"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline ui-icon-arrow-l ui-btn-icon-notext ui-nodisc-icon ui-alt-icon" id="keyC"></button></div>
+                <div class="ui-block-d"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="keyDivide">&divide;</button></div>
+            </div>
+            <div class="ui-grid-c">
+                <div class="ui-block-a"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="key7">7</button></div>
+                <div class="ui-block-b"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="key8">8</button></div>
+                <div class="ui-block-c"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="key9">9</button></div>
+                <div class="ui-block-d"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="keyMultiply">X</button></div>
+
+                <div class="ui-block-a"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="key4">4</button></div>
+                <div class="ui-block-b"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="key5">5</button></div>
+                <div class="ui-block-c"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="key6">6</button></div>
+                <div class="ui-block-d"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="keySubtract">-</button></div>
+
+                <div class="ui-block-a"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="key1">1</button></div>
+                <div class="ui-block-b"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="key2">2</button></div>
+                <div class="ui-block-c"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="key3">3</button></div>
+                <div class="ui-block-d"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="keyAdd">+</button></div>
+            </div>
+            <div class="ui-grid-b">
+                <div class="ui-block-a"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="key0">0</button></div>
+                <div class="ui-block-b"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="keyDecimalPoint">.</button></div>
+                <div class="ui-block-c"><button data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline" id="keyEquals">=</button></div>
+            </div>
+        </div>
+        <!--
+        <div data-role="main" class="ui-content" style="text-align: center;">
+            <div data-role="controlgroup" data-type="horizontal">
+                <button class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline">7</button>
+                <button class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline">8</button>
+                <button class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-btn-inline">9</button>
             </div>
             <div data-role="controlgroup" data-type="horizontal">
-                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-a">4</a>
-                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-a">5</a>
-                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-a">6</a>
+                <button class="ui-btn ui-corner-all ui-shadow ui-btn-a">4</button>
+                <button class="ui-btn ui-corner-all ui-shadow ui-btn-a">5</button>
+                <button class="ui-btn ui-corner-all ui-shadow ui-btn-a">6</button>
             </div>
             <div data-role="controlgroup" data-type="horizontal">
-                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-a">1</a>
-                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-a">2</a>
-                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-a">3</a>
+                <button class="ui-btn ui-corner-all ui-shadow ui-btn-a">1</button>
+                <button class="ui-btn ui-corner-all ui-shadow ui-btn-a">2</button>
+                <button class="ui-btn ui-corner-all ui-shadow ui-btn-a">3</button>
             </div>
              <div data-role="controlgroup" data-type="horizontal">
-                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-a">0</a>
-                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-a">.</a>
-                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-a">=</a>
+                <button class="ui-btn ui-corner-all ui-shadow ui-btn-a">0</button>
+                <button class="ui-btn ui-corner-all ui-shadow ui-btn-a">.</button>
+                <button class="ui-btn ui-corner-all ui-shadow ui-btn-a">=</button>
             </div>
         </div>
+        -->
         <div data-role="footer" data-position="fixed">
-            <h1>&copy 2017 All Rights Reserved</h1>
+            <h1>NorthStar&trade; 2017 All Rights Reserved</h1>
         </div>
     </div>
     <!-- End Homepage Container -->
-
-    <!-- Start Contactpage Container -->
-    <div data-role="page" data-theme="b" id="contact">
-        <div data-role="header">
-            <h1>Contact</h1>
-        </div>
-        <div data-role="navbar">
-            <ul>
-                <li><a href="#home" data-icon="home" data-transition="turn">Home</a></li>
-                <li><a href="#contact" data-icon="phone"data-transition="turn">Contact</a></li>
-            </ul>
-        </div>
-        <!-- main content -->
-        <div data-role="main" class="ui-content">
-
-            <p>Contact Content</p>
-        </div>
-        <div data-role="footer" data-position="fixed">
-            <h1>&copy 2017 All Rights Reserved</h1>
-        </div>
-    </div>
-    <!-- End Contactpage Container -->
 
     <!-- Javascript -->
     <script src="\Scripts\lib\jquery\dist\jquery.min.js"></script>
