@@ -10,10 +10,6 @@
     width: 45px !important;
     height: 35px !important;
 }
-.custom-back-btn {
-    width: 45px !important;
-    height: 6px !important;
-}
 .portrait.ui-grid-c.ui-block-a, .portrait.ui-grid-c.ui-block-b, .portrait.ui-grid-c.ui-block-c, .portrait.ui-grid-c.ui-block-d {
     background-color: lightgray;
     border: 1px solid black;
@@ -21,6 +17,15 @@
     font-weight: bold;
     text-align: center;
     padding: 120px;
+}
+div.ui-input-text { 
+    width: 310px !important;
+    font: bolder 215% arial, sans-serif !important;
+}
+/*
+.custom-back-btn {
+    width: 45px !important;
+    height: 6px !important;
 }
 .ui-button-red {
     background: #f76e6e !important;
@@ -32,3 +37,4 @@
     text-shadow: #f02828 !important;
     border-style: #420505 !important;
 }
+*/
