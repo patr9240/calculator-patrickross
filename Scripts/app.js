@@ -89,6 +89,12 @@ $(document).on("pagecreate", "#portrait-calc", function() {
         case "keyDecimalPoint":
             enterOperand(".");
             break;
+        case "keySquareRoot":
+            getSquareRoot();
+            break;
+        case "keyPlusMinus":
+            plusMinusSwitch();
+            break;
         }
     });
     //divides two operands by eachother
@@ -115,6 +121,23 @@ $(document).on("pagecreate", "#portrait-calc", function() {
         return (accumulatorOperand - currentOperand);
     };
 
+    //gets the squareroot
+    getSquareRoot = function() {
+        displayValue = parseFloat(getDisplayValue())
+        setDisplayValue(Number(Math.sqrt(parseFloat(getDisplayValue())).toFixed(5)));
+    };
+
+    //switches the number on the display between negative and positive
+    plusMinusSwitch = function() {
+        displayValue = parseFloat(getDisplayValue());
+        if(displayValue > 0){
+            setDisplayValue("-" + displayValue.toString());
+        }
+        else{
+            setDisplayValue(displayValue.toString().replace("-", ""));
+        }
+    };
+
     //this function does the operand calculations depending on the selected operator
     calculate = function() {
         //if no operators or operands have been entered yet, exit this function
@@ -122,7 +145,7 @@ $(document).on("pagecreate", "#portrait-calc", function() {
             return;
         }
         //gets the calculator displays value
-        var currentNumber = parseFloat(display.val());
+        var currentNumber = parseFloat(getDisplayValue());
         newDisplayValue = 0;
 
         //switch statement on the operator to figure out which calculation function to call
@@ -184,7 +207,7 @@ $(document).on("pagecreate", "#portrait-calc", function() {
 
     //this function removes the last operand entered in the display
     deleteOperand = function() {
-        var displayValue = display.val();
+        var displayValue = getDisplayValue();
 
         //if there is a operand, remove it set calc display to new value
         if(displayValue){
@@ -198,23 +221,23 @@ $(document).on("pagecreate", "#portrait-calc", function() {
     //this function handles operand and decimal button pushes
     enterOperand = function(buttonValue) {
         //if new operator has been set, or if the display is == 0, set display to the number pushed
-        if(operatorSet == true || display.val() == "0" && buttonValue != "."){
+        if(operatorSet == true || getDisplayValue() == "0" && buttonValue != "."){
             setDisplayValue(buttonValue);
             operatorSet = false;
         }
         
         else{
             //check if current value in the display + 1 is > max display number, 
-            if(display.val().toString().length + 1 > 14){
+            if(getDisplayValue().toString().length + 1 > 14){
                 alert("Cannot enter more than 14 operands");
             }
             else{
                 //check if . already exists in the current display value
-                if(buttonValue == "." && display.val().toString().indexOf(".") != -1){
+                if(buttonValue == "." && getDisplayValue().toString().indexOf(".") != -1){
                     return 0;
                 }
                 else{
-                    setDisplayValue(display.val() + buttonValue);
+                    setDisplayValue(getDisplayValue() + buttonValue);
                 }  
             }
         }
@@ -231,6 +254,6 @@ $(document).on("pagecreate", "#portrait-calc", function() {
             equalsPressed = false;
             operator = operatorValue;
             operatorSet = true;
-            accumulator = parseFloat(display.val());
+            accumulator = parseFloat(getDisplayValue());
     };
 });
