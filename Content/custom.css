@@ -29,6 +29,9 @@ div.ui-input-text {
     width: 310px !important;
     font: bolder 215% arial, sans-serif !important;
 }
+.ui-btn-b {
+    background: #707070 !important;
+}
 /*
 .custom-back-btn {
     width: 45px !important;
