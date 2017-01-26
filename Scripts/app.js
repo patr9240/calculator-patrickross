@@ -5,16 +5,30 @@
     200307049
     This is the custom javascript used for the calculator functions
 */
+//loads splash screen
 $(document).on("pagecreate", "#splash-page", function() {
     setTimeout(function(){
-    $.mobile.changePage("#portrait-calc", "fade");
+    $.mobile.changePage("#calculator", "fade");
     }, 3500);
 });
-$(document).on("pagecreate", "#portrait-calc", function() {
-    //making display field read only
-    $("#displayControlPortrait").prop("readonly", true);
+
+//loads calculator app
+$(document).on("pagecreate", "#calculator", function() {
+    //loads either portrait or landscape calc depending on phones orientation
+    if(window.orientation == 0){
+        $("#landscape-calc").hide();
+        $("#portrait-calc").show();
+    }
+    else{
+        $("#portrait-calc").hide();
+        $("#landscape-calc").show();  
+    }
+
+    //making display field read only for both views
+    $(".displayControl").prop("readonly", true);
+
     //variables used for the calculator
-    var display = $("#displayControlPortrait");
+    var display = $(".displayControl");
     var operator;
     var operatorSet = false;
     var equalsPressed = false;
@@ -25,9 +39,13 @@ $(document).on("pagecreate", "#portrait-calc", function() {
     $(window).on("orientationchange",function() {
         if(window.orientation == 0) {
             // Phone in portrait
+            $("#landscape-calc").hide();
+            $("#portrait-calc").show();
         }
         else {
             //Phone in landscape
+            $("#portrait-calc").hide();
+            $("#landscape-calc").show();
         }
     });
 
@@ -261,8 +279,4 @@ $(document).on("pagecreate", "#portrait-calc", function() {
             operatorSet = true;
             accumulator = parseFloat(getDisplayValue());
     };
-
-    hideSplash = function() {
-        $.mobile.changePage($("#portrait-calc"),"fade");
-    }
 });
