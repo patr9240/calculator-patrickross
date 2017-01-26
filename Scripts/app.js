@@ -6,6 +6,8 @@
     This is the custom javascript used for the calculator functions
 */
 $(document).on("pagecreate", "#portrait-calc", function() {
+    //making display field read only
+    $("#displayControlPortrait").prop("readonly", true);
     //variables used for the calculator
     var display = $("#displayControlPortrait");
     var operator;
