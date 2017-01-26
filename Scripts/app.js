@@ -5,6 +5,11 @@
     200307049
     This is the custom javascript used for the calculator functions
 */
+$(document).on("pagecreate", "#splash-page", function() {
+    setTimeout(function(){
+    $.mobile.changePage("#portrait-calc", "fade");
+    }, 3500);
+});
 $(document).on("pagecreate", "#portrait-calc", function() {
     //making display field read only
     $("#displayControlPortrait").prop("readonly", true);
@@ -256,4 +261,8 @@ $(document).on("pagecreate", "#portrait-calc", function() {
             operatorSet = true;
             accumulator = parseFloat(getDisplayValue());
     };
+
+    hideSplash = function() {
+        $.mobile.changePage($("#portrait-calc"),"fade");
+    }
 });
