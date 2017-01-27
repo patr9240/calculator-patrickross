@@ -48,15 +48,17 @@
 
     <!-- Start calculator Container -->
     <div data-role="page" data-theme="b" id="calculator">
-        <!-- Start portrait view for calc -->
         <div id="portrait-calc">
+            <!-- header -->
             <div data-role="header">
                 <span style="position: absolute; left: 0; top: 0;"><img src="\Assets\logo\NorthStarIconOrangex48.png" alt="NorthStar Logo"/></span>
                 <h1>Number Cruncher</h1>
             </div>
             <!-- main content -->
             <div data-role="controlgroup" data-type="horizontal" style="text-align: center;">
+            <!-- Number Display -->
             <input type="text" class="displayControl" id="displayControlPortrait" data-theme="a" style="text-align: right;" value="ERROR"/>
+                <!-- Calculator buttons -->
                 <div class="ui-grid-c">
                         <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-b" id="keyClear"><font size="5">C</font></button></div>
                         <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-b" id="keyDel"><font size="5">Del</font></button></div>
@@ -84,50 +86,11 @@
                         <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-b" id="keyEquals"><font size="6">=</font></button></div>
                 </div>
             </div>
+            <!-- footer -->
             <div data-role="footer" data-position="fixed">
                 <h3>NorthStar&trade;</h3>
             </div>
         </div>
-        <!-- End protrait view for calc -->
-
-        <!-- Start landscape view for calc -->
-        <div id="landscape-calc">
-            <div data-role="header">
-                <span style="position: absolute; left: 0; top: 0;"><img src="\Assets\logo\NorthStarIconOrangex48.png" alt="NorthStar Logo"/></span>
-                <h1>Number Cruncher</h1>
-            </div>
-            <!-- main content -->
-            <div data-role="controlgroup" data-type="horizontal" style="text-align: center;">
-            <input type="text" class="displayControl" id="displayControlLandscape" data-theme="a" style="text-align: right;" value="ERROR"/>
-                <div class="ui-grid-c">
-                        <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-b" id="keyClear"><font size="5">C</font></button></div>
-                        <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-b" id="keyDel"><font size="5">Del</font></button></div>
-                        <div class="ui-block-c"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-b" id="keySquareRoot"><font size="6">&radic;</font></button></div>
-                        <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-b" id="keyDivide"><font size="6">&divide;</font></button></div>
-
-                        <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key7"><font size="6">7</font></button></div>
-                        <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key8"><font size="6">8</font></button></div>
-                        <div class="ui-block-c"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key9"><font size="6">9</font></button></div>
-                        <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-b" id="keyMultiply"><font size="5">X</font></button></div>
-
-                        <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key4"><font size="6">4</font></button></div>
-                        <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key5"><font size="6">5</font></button></div>
-                        <div class="ui-block-c"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key6"><font size="6">6</font></button></div>
-                        <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-b" id="keySubtract"><font size="6">&minus;</font></button></div>
-
-                        <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key1"><font size="6">1</font></button></div>
-                        <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key2"><font size="6">2</font></button></div>
-                        <div class="ui-block-c"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key3"><font size="6">3</font></button></div>
-                        <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-b" id="keyAdd"><font size="6">+</font></button></div>
-
-                        <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="keyPlusMinus"><font size="6">&plusmn;</font></button></div>
-                        <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key0"><font size="6">0</font></button></div>
-                        <div class="ui-block-c"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="keyDecimalPoint"><font size="6">.</font></button></div>
-                        <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-b" id="keyEquals"><font size="6">=</font></button></div>
-                </div>
-            </div>
-        </div>
-        <!-- End landscape view for calc -->
     </div>
     <!-- End calculator Container -->
 </body>

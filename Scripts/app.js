@@ -14,40 +14,17 @@ $(document).on("pagecreate", "#splash-page", function() {
 
 //loads calculator app
 $(document).on("pagecreate", "#calculator", function() {
-    //loads either portrait or landscape calc depending on phones orientation
-    if(window.orientation == 0){
-        $("#landscape-calc").hide();
-        $("#portrait-calc").show();
-    }
-    else{
-        $("#portrait-calc").hide();
-        $("#landscape-calc").show();  
-    }
 
     //making display field read only for both views
     $(".displayControl").prop("readonly", true);
 
     //variables used for the calculator
     var display = $(".displayControl");
+    display.val("0");
     var operator;
     var operatorSet = false;
     var equalsPressed = false;
     var accumulator = null;
-    display.val("0");
-
-    //Detects phone orientation change (0 = portrait)
-    $(window).on("orientationchange",function() {
-        if(window.orientation == 0) {
-            // Phone in portrait
-            $("#landscape-calc").hide();
-            $("#portrait-calc").show();
-        }
-        else {
-            //Phone in landscape
-            $("#portrait-calc").hide();
-            $("#landscape-calc").show();
-        }
-    });
 
     //Detects button tap event
     $("button").on("tap",function() {

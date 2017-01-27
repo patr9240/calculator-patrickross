@@ -5,18 +5,12 @@
     200307049
     This is the custom css page for the calculator
  */
-.custom-equal-btn {
-    width: 122px !important;
-    height: 35px !important;
-}
-.custom-clear-btn {
-    width: 123px !important;
-    height: 35px !important;
-}
+ /*Custom CSS for Portrait view of the calculator*/
 .custom-single-btn {
     width: 45px !important;
     height: 35px !important;
 }
+
 .portrait.ui-grid-c.ui-block-a, .portrait.ui-grid-c.ui-block-b, .portrait.ui-grid-c.ui-block-c, .portrait.ui-grid-c.ui-block-d {
     background-color: lightgray;
     border: 1px solid black;
@@ -25,26 +19,12 @@
     text-align: center;
     padding: 120px;
 }
-div.ui-input-text { 
+
+#portrait-calc div.ui-input-text { 
     width: 310px !important;
     font: bolder 215% arial, sans-serif !important;
 }
+
 .ui-btn-b {
     background: #707070 !important;
 }
-/*
-.custom-back-btn {
-    width: 45px !important;
-    height: 6px !important;
-}
-.ui-button-red {
-    background: #f76e6e !important;
-    text-shadow: #f76e6e !important;
-    border-style: #420505 !important;
-}
-.ui-button-red:hover {
-    background: #f02828 !important;
-    text-shadow: #f02828 !important;
-    border-style: #420505 !important;
-}
-*/
