@@ -1,5 +1,7 @@
 /* 
     app.js
+    Created: January 25, 2007
+    Updated: January 27, 2017
     Number Cruncher
     Patrick Ross
     200307049
